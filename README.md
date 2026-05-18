@@ -15,6 +15,13 @@ Claude Code skills are markdown files that extend what Claude knows about your w
 | [`diff-review`](diff-review/SKILL.md) | Code review of git changes — uncommitted or since last push. Go, Python, TypeScript/JavaScript. | `"review my changes"`, `"any issues with this?"`, `/diff-review` |
 | [`pr-prep`](pr-prep/SKILL.md) | Pre-push quality gates + code review + conventional commit message draft. Detects stack from CWD. | `"ready to push"`, `"am I good to commit?"`, `/pr-prep` |
 
+### General dev — drop-in, no cloud required
+
+| Skill | What it does | Trigger phrases |
+|---|---|---|
+| [`chrome-extension-debug`](chrome-extension-debug/SKILL.md) | Structured MV3 debugging — 6 failure categories (service worker, message passing, PKCE auth, content script, access gate, API calls) with DevTools snippets and a fix table. | `"extension not working"`, `"service worker terminated"`, `/chrome-extension-debug` |
+| [`db-migration-review`](db-migration-review/SKILL.md) | Reviews a migration file before you run it — NOT NULL risks, lock contention, RENAME breakage, missing FK indexes, transaction safety, and rollback feasibility. PostgreSQL, MySQL, SQLite. | `"review this migration"`, `"is this migration safe?"`, `/db-migration-review` |
+
 ### AWS Ops — works with any AWS project
 
 These skills discover your resources at runtime (`aws logs describe-log-groups`, `aws cloudformation list-stacks`, etc.) instead of requiring a config file. Point your AWS CLI at the right account and region and they just work.
